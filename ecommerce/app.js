@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var mongodb = "insert url here";
+var mongodb = 'mongodb://test:1234@ds239128.mlab.com:39128/todo_test';
 mongoose.connect(mongodb);
-mongoose.Promise = global.Promse;
+mongoose.Promise = global.Promise;
 
 var index = require('./routes/index');
 var users = require('./routes/users');

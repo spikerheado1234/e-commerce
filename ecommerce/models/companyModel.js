@@ -9,5 +9,10 @@ var company = new Schema(
   }
 );
 
+company.virtual('id').get(function() {
+  return '/' + this.company_id;
+  }
+);
+
 
 module.exports = mongoose.model('company', company);
