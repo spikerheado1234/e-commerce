@@ -8,4 +8,13 @@ var users = new Schema(
   }
 );
 
+// Virtual attributes displaying the users username and password for ease later.
+user.virtual('username').get(function() {
+  return '/' + this.user_id;
+});
+
+user.virtual('password').get(function() {
+  return '/' this.password;
+});
+
 module.exports = mongoose.model("users", users);
