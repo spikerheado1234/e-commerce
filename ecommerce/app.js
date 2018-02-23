@@ -11,6 +11,10 @@ mongoose.Promise = global.Promise;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var payment = require('./routes/payment');
+var personalPage = require('./routes/personalPage');
+var savings = require('./routes/savings');
+var status = require('./routes/status');
 
 var app = express();
 
@@ -27,7 +31,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/index', index);
 app.use('/users', users);
+app.use('/payment', payment);
+app.use('/personalPage', personalPage);
+app.use('/savings', savings);
+app.use('/status', status);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,3 +1,3 @@
 # e-commerce
-a Dapp to store and verify geniune part sales
+A webapp to coordinate b2b zone skipping.
 
